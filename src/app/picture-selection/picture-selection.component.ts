@@ -1,4 +1,4 @@
-import { Component,ViewEncapsulation } from '@angular/core';
+import { Component,ViewEncapsulation,EventEmitter } from '@angular/core';
 import { Observable,timer,interval} from 'rxjs'
 import{ take ,map} from 'rxjs/operators';
 @Component({
@@ -14,6 +14,7 @@ export class PictureSelectionComponent{
   countDown:any;
   counter = 20;
   showTimout = false;
+  @Output('onTimeout') onTimeout = new EventEmitter();
   questions:QuestionInfo[] = [
     {
       Question:'Select traffic lights in the boxes',
