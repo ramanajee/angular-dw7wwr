@@ -1,0 +1,8 @@
+.tile{
+  cursor: pointer;
+}
+
+.selected-image {
+  border-color: green;
+  border-style: solid;
+}

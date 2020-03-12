@@ -1,0 +1,11 @@
+<div class="image-block"> 
+<img src="https://www.transitchicago.com/cms/images/layout/logo.png">
+</div>
+ <mat-form-field style="padding-top:20px;padding-left:150px;">
+    <mat-label>Badge No.</mat-label>
+    <input numbersOnly [formControl]="badgeCtrl" #badgeNo matInput placeholder="Badge No." maxlength="6" minlength="5">
+  </mat-form-field>
+  <br>
+  <div *ngIf="badgeNo.value.length >=5">
+<app-picture-selection (onTimeout)="onTimeout($event)"></app-picture-selection>
+</div>

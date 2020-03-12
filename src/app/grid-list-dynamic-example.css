@@ -1,0 +1,10 @@
+mat-grid-tile{
+  padding: 5px;
+  border-color: green;
+  cursor: pointer;
+  padding-left: 250px;
+}
+
+.image-block{
+  background-color: #2166b1;
+}

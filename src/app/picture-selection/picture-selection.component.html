@@ -1,0 +1,19 @@
+{{randomQuestion.Question}} within
+{{ counter }} seconds
+<br>
+<div style="width:40%">
+<mat-grid-list *ngIf="!showTimout" cols="3" rowHeight="3:2">
+  <mat-grid-tile (click)="image.IsImageSelected = !image.IsImageSelected" [class.selected-image]="image.IsImageSelected" *ngFor="let image of randomQuestion.Images">
+    <img width="320" style="boarder:4px;cursor:pointer;" (click)="onImageClick(image)" [src]="image.ImagePaht">
+  </mat-grid-tile>
+</mat-grid-list>
+<br />
+<button mat-raised-button style="float:right;" (click)="verifyAns();" color="primary">Verify</button>
+</div>
+<h1 *ngIf="showPin" style="padding-top:30px;">
+  Please take your PIN
+</h1>
+
+<h1 style="padding-left:30px;padding-top:30px;" *ngIf="showTimout && !showPin">
+  Please see your manager
+</h1>
