@@ -10,6 +10,6 @@ import{ take ,map} from 'rxjs/operators';
 export class GridListDynamicExample {
   badgeCtrl = new FormControl();
   onTimeout(event:any):void{
-
+      console.info(event);
   }
 }
