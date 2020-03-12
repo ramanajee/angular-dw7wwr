@@ -133,6 +133,7 @@ export class PictureSelectionComponent{
         if(!this.showPin){
         this.showTimout = true;
         this.showPin = false;
+        this.onTimeout.emit(true);
         }
         subscription.unsubscribe();
       }
