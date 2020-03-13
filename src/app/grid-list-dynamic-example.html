@@ -3,7 +3,7 @@
 </div>
  <mat-form-field style="padding-top:20px;padding-left:150px;">
     <mat-label>Badge No.</mat-label>
-    <input numbersOnly [formControl]="badgeCtrl" #badgeNo matInput placeholder="Badge No." maxlength="6" minlength="5">
+    <input numbersOnly [(ngModel)]="bNumber" #badgeNo matInput placeholder="Badge No." maxlength="6" minlength="5">
   </mat-form-field>
   <br>
   <div *ngIf="badgeNo.value.length >=5">

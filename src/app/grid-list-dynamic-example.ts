@@ -8,8 +8,10 @@ import{ take ,map} from 'rxjs/operators';
   styleUrls: ['grid-list-dynamic-example.css'],
 })
 export class GridListDynamicExample {
-  badgeCtrl = new FormControl();
+  bNumber='';
   onTimeout(event:any):void{
-      this.badgeCtrl.setValue();
+      if(event as boolean){
+        this.bNumber = '';
+      }
   }
 }
